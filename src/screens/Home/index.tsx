@@ -3,9 +3,7 @@ import {View, Text, ImageBackground, Pressable} from 'react-native';
 import {styles} from './styles';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 
-export interface AppProps {}
-
-export function HomeScreen(props: AppProps) {
+export function HomeScreen(props: any) {
   return (
     <View>
       <Pressable
