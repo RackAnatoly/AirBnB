@@ -6,7 +6,6 @@
  */
 import Entype from 'react-native-vector-icons/Entypo';
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
 
 function App(): JSX.Element {
