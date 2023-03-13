@@ -1,11 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
 import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
+import {Post} from './src/components/Post';
 import {HomeScreen} from './src/screens/Home';
 
 function App(): JSX.Element {
@@ -13,7 +8,8 @@ function App(): JSX.Element {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <HomeScreen />
+        {/* <HomeScreen /> */}
+        <Post />
       </SafeAreaView>
     </>
   );
