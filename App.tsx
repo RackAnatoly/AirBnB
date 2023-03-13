@@ -4,15 +4,17 @@
  *
  * @format
  */
-import Entype from 'react-native-vector-icons/Entypo';
 import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
+import {HomeScreen} from './src/screens/Home';
 
 function App(): JSX.Element {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView></SafeAreaView>
+      <SafeAreaView>
+        <HomeScreen />
+      </SafeAreaView>
     </>
   );
 }
