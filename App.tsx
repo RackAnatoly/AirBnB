@@ -4,6 +4,7 @@ import {Post} from './src/components/Post';
 import {HomeScreen} from './src/screens/Home';
 import feed from './assets/data/feed';
 import {SearchResultScreen} from './src/screens/SearchResults';
+import {DestinationSearchScreen} from './src/screens/DestinationSearch';
 
 function App(): JSX.Element {
   return (
@@ -12,7 +13,8 @@ function App(): JSX.Element {
       <SafeAreaView>
         {/* <HomeScreen /> */}
         {/* <Post post={post1} /> */}
-        <SearchResultScreen />
+        {/* <SearchResultScreen /> */}
+        <DestinationSearchScreen />
       </SafeAreaView>
     </>
   );
