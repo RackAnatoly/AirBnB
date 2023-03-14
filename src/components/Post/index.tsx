@@ -2,25 +2,26 @@ import * as React from 'react';
 import {View, Text, Image} from 'react-native';
 import {styles} from './styles';
 
-export function Post(props: any) {
+export function Post({post}: any) {
   return (
     <View style={styles.container}>
       <Image
         style={styles.image}
         source={{
-          uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg',
+          uri: post.image,
         }}
       />
-      <Text style={styles.bedrooms}>1 bed 1 bedroom</Text>
+      <Text style={styles.bedrooms}>
+        {post.bed} bed {post.bedroom} bedroom
+      </Text>
       <Text style={styles.description} numberOfLines={2}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, ad
-        nostrum. Repudiandae nihil provident culpa.
+        {post.type}. {post.title}
       </Text>
       <Text style={styles.prices}>
-        <Text style={styles.oldPrice}>$36 </Text>
-        <Text style={styles.price}> $30 </Text>/ night
+        <Text style={styles.oldPrice}>${post.oldPrice} </Text>
+        <Text style={styles.price}> ${post.newPrice} </Text>/ night
       </Text>
-      <Text style={styles.totalPrice}>$230 Total</Text>
+      <Text style={styles.totalPrice}>${post.totalPrice} Total</Text>
     </View>
   );
 }
