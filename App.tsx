@@ -6,6 +6,7 @@ import feed from './assets/data/feed';
 import {SearchResultScreen} from './src/screens/SearchResults';
 import {DestinationSearchScreen} from './src/screens/DestinationSearch';
 import {GuestsScreen} from './src/screens/Guests';
+import 'react-native-gesture-handler';
 
 function App(): JSX.Element {
   return (
