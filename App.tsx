@@ -7,18 +7,13 @@ import {SearchResultScreen} from './src/screens/SearchResults';
 import {DestinationSearchScreen} from './src/screens/DestinationSearch';
 import {GuestsScreen} from './src/screens/Guests';
 import 'react-native-gesture-handler';
+import {Router} from './src/navigation/Router';
 
-function App(): JSX.Element {
+function App() {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        {/* <HomeScreen /> */}
-        {/* <Post post={post1} /> */}
-        {/* <SearchResultScreen /> */}
-        {/* <DestinationSearchScreen /> */}
-        <GuestsScreen />
-      </SafeAreaView>
+      <Router />
     </>
   );
 }
