@@ -2,14 +2,15 @@ import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import {HomeScreen} from '../screens/Home';
 import {SearchResultScreen} from '../screens/SearchResults';
+import SearchResultsTabNavigator from './SearchResultsTabNavigator';
 
-const Stack = createStackNavigator();
+export const Stack = createStackNavigator();
 
 export default function ExploreNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={'Welcome'}
+        name={'welcome'}
         component={HomeScreen}
         options={{
           headerShown: false,
@@ -18,7 +19,7 @@ export default function ExploreNavigator() {
 
       <Stack.Screen
         name={'SearchResults'}
-        component={SearchResultScreen}
+        component={SearchResultsTabNavigator}
         options={{
           title: 'Search your destination',
         }}
