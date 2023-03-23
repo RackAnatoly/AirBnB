@@ -6,12 +6,13 @@ const Tab = createMaterialTopTabNavigator();
 function SearchResultsTabNavigator() {
   return (
     <Tab.Navigator
-      tabBarOptions={{
-        activeTintColor: '#f15454',
-        indicatorStyle: {
-          backgroundColor: '#f15454',
-        },
-      }}>
+    // tabBarOptions={{
+    //   activeTintColor: '#f15454',
+    //   indicatorStyle: {
+    //     backgroundColor: '#f15454',
+    //   },
+    // }}
+    >
       <Tab.Screen name={'List'} component={SearchResultScreen} />
       <Tab.Screen name={'map'} component={SearchResultScreen} />
     </Tab.Navigator>
