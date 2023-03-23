@@ -6,7 +6,7 @@ export interface GuestsScreenProps {}
 
 export function GuestsScreen({navigation}: any) {
   const [adults, setAdults] = React.useState(0);
-  const [childrens, setChildrens] = React.useState(0);
+  const [children, setChildren] = React.useState(0);
   const [infants, setInfants] = React.useState(0);
 
   return (
@@ -33,20 +33,18 @@ export function GuestsScreen({navigation}: any) {
         </View>
         <View style={styles.row}>
           <View>
-            <Text style={{fontWeight: 'bold'}}>Childrens</Text>
+            <Text style={{fontWeight: 'bold'}}>Children</Text>
             <Text style={{color: '#8d8d8d'}}>Ages 2-12</Text>
           </View>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Pressable
-              onPress={() => setChildrens(Math.max(0, childrens - 1))}
+              onPress={() => setChildren(Math.max(0, children - 1))}
               style={styles.button}>
               <Text style={{fontSize: 20, color: 'grey'}}>-</Text>
             </Pressable>
-            <Text style={{marginHorizontal: 20, fontSize: 16}}>
-              {childrens}
-            </Text>
+            <Text style={{marginHorizontal: 20, fontSize: 16}}>{children}</Text>
             <Pressable
-              onPress={() => setChildrens(childrens + 1)}
+              onPress={() => setChildren(children + 1)}
               style={styles.button}>
               <Text style={{fontSize: 20, color: 'grey'}}>+</Text>
             </Pressable>
@@ -74,7 +72,14 @@ export function GuestsScreen({navigation}: any) {
       </View>
       <View>
         <Pressable
-          onPress={() => navigation.navigate('')}
+          onPress={() =>
+            navigation.navigate('Home', {
+              screen: 'Explore',
+              params: {
+                screen: 'SearchResults',
+              },
+            })
+          }
           style={{
             marginBottom: 20,
             backgroundColor: '#f15454',
